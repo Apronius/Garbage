@@ -1,0 +1,11 @@
+mutation Login($isBarber: Boolean!, $passWord: String!, $userName: String!) {
+  userLogin(isBarber: $isBarber, passWord: $passWord, userName: $userName) {
+    user {
+      id
+      username
+    }
+    errors {
+      ...RegularError
+    }
+  }
+}
